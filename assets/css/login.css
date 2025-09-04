@@ -112,8 +112,8 @@
 
 .input-wrapper {
     position: relative;
-    display: flex;
-    align-items: center;
+    display: block;
+    width: 100%;
 }
 
 .input-wrapper i {
@@ -121,18 +121,21 @@
     left: 1rem;
     color: #64748B;
     font-size: 1.1rem;
-    z-index: 2;
+    z-index: 1;
+    pointer-events: none;
 }
 
 .form-group input {
     width: 100%;
-    padding: 1rem 1rem 1rem 3rem;
+    padding: 1rem 3.5rem 1rem 3rem;
     background: rgba(30, 41, 59, 0.6);
     border: 2px solid rgba(148, 163, 184, 0.2);
     border-radius: 12px;
     color: #F8FAFC;
     font-size: 1rem;
     transition: all 0.3s ease;
+    z-index: 0;
+    position: relative;
 }
 
 .form-group input:focus {
@@ -156,6 +159,12 @@
     padding: 0.5rem;
     border-radius: 6px;
     transition: color 0.3s ease;
+    z-index: 2;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .toggle-password:hover {

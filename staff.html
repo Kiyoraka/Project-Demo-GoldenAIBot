@@ -325,12 +325,205 @@
             <!-- User List Page -->
             <div class="page" id="users-page">
                 <div class="page-header">
-                    <h1>User Management</h1>
-                    <p class="page-subtitle">Manage user accounts and permissions</p>
+                    <h1>User List</h1>
+                    <p class="page-subtitle">View and monitor trading platform users</p>
                 </div>
-                <div class="coming-soon">
-                    <i class="fas fa-cog fa-spin"></i>
-                    <p>User Management Coming Soon</p>
+                
+                <div class="user-list-container">
+                    <div class="user-controls">
+                        <div class="search-bar">
+                            <i class="fas fa-search"></i>
+                            <input type="text" placeholder="Search users..." id="userSearch">
+                        </div>
+                        <div class="filter-controls">
+                            <select class="filter-select" id="userFilter">
+                                <option value="all">All Users</option>
+                                <option value="premium">Premium Users</option>
+                                <option value="free">Free Users</option>
+                                <option value="active">Active Users</option>
+                                <option value="new">New Users</option>
+                            </select>
+                            <div class="user-stats">
+                                <span class="stat-item">
+                                    <strong>Total:</strong> 247 users
+                                </span>
+                                <span class="stat-item">
+                                    <strong>Premium:</strong> 89 users
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="user-table-container">
+                        <table class="user-table">
+                            <thead>
+                                <tr>
+                                    <th>User</th>
+                                    <th>Email</th>
+                                    <th>Type</th>
+                                    <th>Status</th>
+                                    <th>Joined</th>
+                                    <th>Last Active</th>
+                                </tr>
+                            </thead>
+                            <tbody id="userTableBody">
+                                <tr>
+                                    <td>
+                                        <div class="user-info">
+                                            <div class="user-avatar premium">
+                                                <i class="fas fa-crown"></i>
+                                            </div>
+                                            <div class="user-details">
+                                                <strong>Michael Chen</strong>
+                                                <span>ID: #2847</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>michael.chen@email.com</td>
+                                    <td><span class="badge premium">💎 Premium</span></td>
+                                    <td><span class="status-badge active">Active</span></td>
+                                    <td>2 months ago</td>
+                                    <td>5 minutes ago</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="user-info">
+                                            <div class="user-avatar free">
+                                                <i class="fas fa-user"></i>
+                                            </div>
+                                            <div class="user-details">
+                                                <strong>Sarah Johnson</strong>
+                                                <span>ID: #2848</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>sarah.johnson@email.com</td>
+                                    <td><span class="badge free">Free User</span></td>
+                                    <td><span class="status-badge active">Active</span></td>
+                                    <td>3 weeks ago</td>
+                                    <td>2 hours ago</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="user-info">
+                                            <div class="user-avatar premium">
+                                                <i class="fas fa-crown"></i>
+                                            </div>
+                                            <div class="user-details">
+                                                <strong>Ahmed Hassan</strong>
+                                                <span>ID: #2849</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>ahmed.hassan@email.com</td>
+                                    <td><span class="badge premium">💎 Premium</span></td>
+                                    <td><span class="status-badge active">Active</span></td>
+                                    <td>1 month ago</td>
+                                    <td>30 minutes ago</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="user-info">
+                                            <div class="user-avatar free">
+                                                <i class="fas fa-user"></i>
+                                            </div>
+                                            <div class="user-details">
+                                                <strong>Emma Rodriguez</strong>
+                                                <span>ID: #2850</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>emma.rodriguez@email.com</td>
+                                    <td><span class="badge free">Free User</span></td>
+                                    <td><span class="status-badge offline">Offline</span></td>
+                                    <td>1 week ago</td>
+                                    <td>1 day ago</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="user-info">
+                                            <div class="user-avatar premium">
+                                                <i class="fas fa-crown"></i>
+                                            </div>
+                                            <div class="user-details">
+                                                <strong>David Kim</strong>
+                                                <span>ID: #2851</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>david.kim@email.com</td>
+                                    <td><span class="badge premium">💎 Premium</span></td>
+                                    <td><span class="status-badge active">Active</span></td>
+                                    <td>6 weeks ago</td>
+                                    <td>15 minutes ago</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="user-info">
+                                            <div class="user-avatar free">
+                                                <i class="fas fa-user"></i>
+                                            </div>
+                                            <div class="user-details">
+                                                <strong>Lisa Thompson</strong>
+                                                <span>ID: #2852</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>lisa.thompson@email.com</td>
+                                    <td><span class="badge free">Free User</span></td>
+                                    <td><span class="status-badge active">Active</span></td>
+                                    <td>5 days ago</td>
+                                    <td>1 hour ago</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="user-info">
+                                            <div class="user-avatar premium">
+                                                <i class="fas fa-crown"></i>
+                                            </div>
+                                            <div class="user-details">
+                                                <strong>Robert Wilson</strong>
+                                                <span>ID: #2853</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>robert.wilson@email.com</td>
+                                    <td><span class="badge premium">💎 Premium</span></td>
+                                    <td><span class="status-badge active">Active</span></td>
+                                    <td>3 months ago</td>
+                                    <td>10 minutes ago</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="user-info">
+                                            <div class="user-avatar free">
+                                                <i class="fas fa-user"></i>
+                                            </div>
+                                            <div class="user-details">
+                                                <strong>Maria Garcia</strong>
+                                                <span>ID: #2854</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>maria.garcia@email.com</td>
+                                    <td><span class="badge free">Free User</span></td>
+                                    <td><span class="status-badge active">Active</span></td>
+                                    <td>2 weeks ago</td>
+                                    <td>45 minutes ago</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="pagination">
+                        <button class="pagination-btn" disabled>
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <span class="pagination-info">1 of 31 pages • Showing 8 of 247 users</span>
+                        <button class="pagination-btn">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>

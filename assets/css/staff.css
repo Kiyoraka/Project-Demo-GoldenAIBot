@@ -224,16 +224,240 @@
     justify-content: flex-end;
 }
 
+/* User List Page */
+.user-list-container {
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(148, 163, 184, 0.1);
+    border-radius: 16px;
+    padding: 2rem;
+}
+
+.user-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.search-bar {
+    position: relative;
+    flex: 1;
+    max-width: 300px;
+}
+
+.search-bar i {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #64748B;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 0.75rem 1rem 0.75rem 3rem;
+    background: rgba(30, 41, 59, 0.6);
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    border-radius: 8px;
+    color: #F8FAFC;
+    font-size: 0.875rem;
+}
+
+.filter-controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.filter-select {
+    padding: 0.75rem 1rem;
+    background: rgba(30, 41, 59, 0.6);
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    border-radius: 8px;
+    color: #F8FAFC;
+    font-size: 0.875rem;
+}
+
+.user-stats {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.875rem;
+}
+
+.stat-item {
+    color: #94A3B8;
+}
+
+.stat-item strong {
+    color: #F8FAFC;
+}
+
+.user-table-container {
+    overflow-x: auto;
+    margin-bottom: 2rem;
+}
+
+.user-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.user-table th,
+.user-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+}
+
+.user-table th {
+    color: #94A3B8;
+    font-weight: 600;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.user-table td {
+    color: #E2E8F0;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 0.875rem;
+}
+
+.user-avatar.premium {
+    background: linear-gradient(135deg, #8B5CF6, #7C3AED);
+}
+
+.user-avatar.free {
+    background: linear-gradient(135deg, #64748B, #475569);
+}
+
+.user-details strong {
+    display: block;
+    color: #F8FAFC;
+    font-weight: 600;
+}
+
+.user-details span {
+    color: #94A3B8;
+    font-size: 0.75rem;
+}
+
+.badge {
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.badge.premium {
+    background: linear-gradient(90deg, #8B5CF6, #7C3AED);
+    color: white;
+}
+
+.badge.free {
+    background: rgba(148, 163, 184, 0.2);
+    color: #94A3B8;
+}
+
+.status-badge {
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.status-badge.active {
+    background: rgba(16, 185, 129, 0.2);
+    color: #10B981;
+}
+
+.status-badge.offline {
+    background: rgba(148, 163, 184, 0.2);
+    color: #94A3B8;
+}
+
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pagination-btn {
+    padding: 0.5rem 1rem;
+    background: rgba(30, 41, 59, 0.6);
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    border-radius: 6px;
+    color: #E2E8F0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.pagination-btn:hover:not(:disabled) {
+    background: rgba(30, 41, 59, 0.8);
+    border-color: #F59E0B;
+}
+
+.pagination-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.pagination-info {
+    color: #94A3B8;
+    font-size: 0.875rem;
+}
+
 /* Staff-specific responsive adjustments */
 @media (max-width: 1024px) {
     .message-options {
         grid-template-columns: 1fr;
         gap: 1rem;
     }
+    
+    .signal-options {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .user-controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .search-bar {
+        max-width: 100%;
+    }
 }
 
 @media (max-width: 768px) {
     .message-actions {
         flex-direction: column;
+    }
+    
+    .signal-actions {
+        flex-direction: column;
+    }
+    
+    .user-stats {
+        justify-content: center;
     }
 }

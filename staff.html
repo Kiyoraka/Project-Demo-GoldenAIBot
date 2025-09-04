@@ -208,9 +208,105 @@
                     <h1>Signal Management</h1>
                     <p class="page-subtitle">Create and broadcast trading signals</p>
                 </div>
-                <div class="coming-soon">
-                    <i class="fas fa-cog fa-spin"></i>
-                    <p>Signal Management Coming Soon</p>
+                
+                <div class="signals-container">
+                    <div class="compose-section">
+                        <h3>Compose Trading Signal</h3>
+                        
+                        <div class="signal-tabs">
+                            <button class="tab-btn active" data-type="gold">
+                                <i class="fas fa-coins"></i>
+                                Gold Signal
+                            </button>
+                            <button class="tab-btn" data-type="forex">
+                                <i class="fas fa-chart-line"></i>
+                                Forex Signal
+                            </button>
+                            <button class="tab-btn" data-type="crypto">
+                                <i class="fas fa-bitcoin"></i>
+                                Crypto Signal
+                            </button>
+                            <button class="tab-btn" data-type="custom">
+                                <i class="fas fa-edit"></i>
+                                Custom Signal
+                            </button>
+                        </div>
+                        
+                        <div class="signal-compose">
+                            <div class="compose-header">
+                                <h4>Trading Signal</h4>
+                            </div>
+                            
+                            <div class="signal-templates">
+                                <h5>Quick Templates</h5>
+                                <div class="template-buttons">
+                                    <button class="template-btn" data-template="gold-buy">🥇 GOLD BUY</button>
+                                    <button class="template-btn" data-template="gold-sell">🥇 GOLD SELL</button>
+                                    <button class="template-btn" data-template="eurusd-buy">💶 EURUSD BUY</button>
+                                    <button class="template-btn" data-template="btc-buy">₿ BTC BUY</button>
+                                </div>
+                            </div>
+                            
+                            <textarea class="signal-textarea" placeholder="📈 **GOLD BUY SIGNAL** 📈
+
+🎯 **Entry:** $2,650.00
+🛑 **Stop Loss:** $2,630.00
+💰 **Take Profit 1:** $2,680.00
+💰 **Take Profit 2:** $2,710.00
+
+📊 **Risk/Reward:** 1:2.5
+⏰ **Valid Until:** 24 hours
+
+🔥 **Analysis:** Strong bullish momentum with support at key level. Economic data favoring gold rally.
+
+#GoldTrading #TradingSignal #ForexSignals"></textarea>
+                            
+                            <div class="signal-options">
+                                <div class="options-column">
+                                    <h4>Signal Features</h4>
+                                    <div class="option-item">
+                                        <input type="checkbox" id="include-chart" checked>
+                                        <label for="include-chart">📊 Include Chart Analysis</label>
+                                    </div>
+                                    <div class="option-item">
+                                        <input type="checkbox" id="add-alerts" checked>
+                                        <label for="add-alerts">🔔 Add Price Alerts</label>
+                                    </div>
+                                    <div class="option-item">
+                                        <input type="checkbox" id="risk-management">
+                                        <label for="risk-management">⚠️ Risk Management Tips</label>
+                                    </div>
+                                </div>
+                                
+                                <div class="options-column">
+                                    <h4>Target Audience</h4>
+                                    <div class="option-item">
+                                        <input type="radio" name="signal-target" id="all-traders" checked>
+                                        <label for="all-traders">All Traders</label>
+                                    </div>
+                                    <div class="option-item">
+                                        <input type="radio" name="signal-target" id="premium-traders">
+                                        <label for="premium-traders">💎 Premium Traders Only</label>
+                                    </div>
+                                    <div class="option-item">
+                                        <input type="radio" name="signal-target" id="vip-traders">
+                                        <label for="vip-traders">👑 VIP Traders Only</label>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="signal-actions">
+                                <button class="btn-secondary">
+                                    <i class="fas fa-eye"></i>
+                                    Preview Signal
+                                </button>
+                                <button class="btn-primary">
+                                    <i class="fas fa-broadcast-tower"></i>
+                                    Broadcast Signal
+                                </button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             

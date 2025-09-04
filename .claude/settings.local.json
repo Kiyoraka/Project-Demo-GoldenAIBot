@@ -8,7 +8,10 @@
       "Bash(git add:*)",
       "Bash(git commit:*)",
       "Read(/D:\\Afif Personal\\Kiyo Software TechLab\\Company Project\\Web\\Project Demo GoldenAI Bot/**)",
-      "Read(/D:\\Afif Personal\\Kiyo Software TechLab\\Company Project\\Web\\Project Demo GoldenAI Bot/**)"
+      "Read(/D:\\Afif Personal\\Kiyo Software TechLab\\Company Project\\Web\\Project Demo GoldenAI Bot/**)",
+      "Read(/D:\\Afif Personal\\Kiyo Software TechLab\\Company Project\\Web\\Project Demo GoldenAI Bot/**)",
+      "Read(/D:\\Afif Personal\\Kiyo Software TechLab\\Company Project\\Web\\Project Demo GoldenAI Bot\\assets\\css/**)",
+      "Read(/C:\\Users\\User\\Pictures\\Screenshots/**)"
     ],
     "deny": [],
     "ask": []
